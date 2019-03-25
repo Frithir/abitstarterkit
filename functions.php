@@ -4,6 +4,7 @@ require_once('functions/enqueue.php');
 require_once('functions/admin.php');
 require_once('functions/debug.php');
 require_once('functions/default.php');
+require_once('functions/menu.php');
 
 // Un-comment to use
 // require_once('functions/acf.php');
@@ -11,7 +12,6 @@ require_once('functions/default.php');
 // require_once('functions/gravityforms.php');
 // require_once('functions/gravity_forms-v5.php');
 // require_once('functions/images.php');
-// require_once('functions/menu.php');
 // require_once('functions/pagination.php');
 // require_once('functions/yoast.php');
 

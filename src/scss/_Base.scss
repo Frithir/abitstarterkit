@@ -16,7 +16,6 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  background: rgba($col4, 0.5);
   @media screen and (#{$bp-tablet}) {
     font-size: 1.4rem;
   }
