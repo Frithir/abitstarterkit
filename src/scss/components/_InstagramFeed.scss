@@ -1,0 +1,46 @@
+.InstagramFeed {
+  text-align: center;
+  width: 100%;
+}
+
+.InstagramFeed--row {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 0 1rem 0;
+}
+
+.InstagramFeed--title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.8rem;
+  color: $col2;
+  @media screen and (#{$bp-tablet}) {
+    text-align: center;
+  }
+  i {
+    font-size: 2em;
+    vertical-align: middle;
+  }
+}
+
+.InstagramFeed--item {
+  display: block;
+  position: relative;
+  width: calc(33.33% - 1rem);
+  margin: 0 0.5rem 1rem 0.5rem;
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}

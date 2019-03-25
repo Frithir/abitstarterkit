@@ -1,0 +1,213 @@
+.post-type-archive-product .footer-wrap,
+.tax-product_cat .footer-wrap {
+  background: transparent;
+}
+
+.footer-wrap {
+  position: relative;
+  pointer-events: none;
+  .footer-wrap-img {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 200px);
+    top: -200px;
+    z-index: -1;
+  }
+}
+.single-howto .footer-wrap .footer-wrap-img,
+.single-post .footer-wrap .footer-wrap-img {
+  z-index: 0;
+}
+
+.subscribe {
+  position: relative;
+  pointer-events: all;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (#{$bp-desktop}) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .Subscribe {
+    @media screen and (#{$bp-desktop}) {
+      flex-direction: column;
+      .one-half {
+        width: 100%;
+      }
+    }
+  }
+  .split-title {
+    text-align: left;
+    @media screen and (#{$bp-desktop}) {
+      text-align: center;
+    }
+    .script {
+      color: white;
+    }
+    .bold {
+      font-size: 3rem;
+    }
+  }
+}
+
+.footer {
+  padding: 0;
+  color: $col3;
+  pointer-events: all;
+  .container {
+    border-top: 1px solid rgba($mid-grey, 0.4);
+    border-bottom: 1px solid rgba($mid-grey, 0.4);
+    padding: 4rem 0;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media screen and (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .two-thirds {
+        width: 100%;
+      }
+      .one-third.taright {
+        width: 100%;
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .social_links {
+          justify-content: center;
+        }
+      }
+    }
+    @media screen and (#{$bp-tablet}) {
+      .two-thirds {
+        width: 100%;
+        flex-wrap: wrap;
+        .one-quarter {
+          width: calc(50% - 4rem);
+          margin: 2rem;
+        }
+      }
+      .one-third.taright {
+        width: 100%;
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .social_links {
+          justify-content: center;
+        }
+      }
+    }
+    @media screen and (#{$bp-mobile}) {
+      .one-third.taright {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+
+  a {
+    color: $dark-grey;
+    &:hover {
+      color: $col1;
+    }
+  }
+
+  p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+
+  h3 {
+    color: $dark-grey;
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    li {
+      margin: 0 0 0.5rem 0;
+      padding: 0;
+    }
+  }
+
+  .social_links {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+    @extend .flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media screen and (#{$bp-tablet}) {
+      justify-content: center;
+      margin: 0;
+    }
+    li {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      display: inline-block;
+      margin: 0 1rem 0 0;
+      padding: 0.2rem 0 0 0;
+      text-align: center;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .payments {
+    width: 300px;
+    height: auto;
+    @media screen and (#{$bp-mobile}) {
+      max-width: 90%;
+      width: 100%;
+    }
+  }
+}
+
+.copy {
+  color: white;
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+  pointer-events: all;
+  @media screen and (#{$bp-tablet}) {
+    padding: 1.5rem 0 5rem;
+  }
+  .container {
+    justify-content: space-between;
+    color: $dark-grey;
+    @media screen and (#{$bp-tablet}) {
+      flex-direction: column;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      color: $dark-grey;
+      &:hover {
+        color: $col1;
+      }
+    }
+  }
+}

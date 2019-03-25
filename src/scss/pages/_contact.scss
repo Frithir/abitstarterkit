@@ -1,0 +1,44 @@
+// shadow offset
+$offset: 0;
+.two-column {
+  overflow: visible;
+  .row {
+    width: 100%;
+    position: relative;
+    align-items: stretch;
+    margin: 0 0 10rem 0;
+    @media screen and (#{$bp-tablet}) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .image-group {
+    position: relative;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 50%;
+    @media screen and (#{$bp-tablet}) {
+      width: 250px;
+      height: 250px;
+      margin: 1rem auto;
+    }
+  }
+  .content {
+    width: 50%;
+    position: relative;
+    padding: 0 0 0 2rem;
+    @media screen and (#{$bp-tablet}) {
+      width: 100%;
+    }
+    @media screen and (#{$bp-phablet}) {
+      padding: 0;
+    }
+  }
+}
+
+.icon-list {
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}

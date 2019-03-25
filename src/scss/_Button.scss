@@ -1,0 +1,82 @@
+// Button
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.button,
+button {
+  background-color: $col2;
+  border: 0.1rem solid $col2;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: $col1;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  line-height: 3.8rem;
+  padding: 0 3rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: $font-main;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    background-color: $dark-grey;
+    border-color: $dark-grey;
+    color: $col1;
+    outline: 0;
+  }
+
+  &.button-outline {
+    color: white;
+    background-color: transparent;
+    border: white 1px solid;
+    &:hover,
+    &:focus {
+      color: $col2;
+      background-color: white;
+      border-color: white;
+    }
+  }
+
+  &.button-clear {
+    color: $col2;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $col3;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+  &.button-light {
+    opacity: 0.7;
+  }
+}
+
+.link {
+  color: $dark-grey;
+  border-bottom: 0.1rem solid currentColor;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  line-height: 3.8rem;
+  padding: 0 3rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0 auto;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $col2;
+  }
+}

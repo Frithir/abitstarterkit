@@ -1,0 +1,116 @@
+.overview-block-product {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 2rem 2rem 0 0;
+  width: calc(25% - 2rem);
+  background: $light-grey;
+  @media screen and (#{$bp-tablet}) {
+    width: calc(50% - 2rem);
+  }
+  @media screen and (#{$bp-mobile}) {
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+  }
+  .tinvwl-shortcode-add-to-cart {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1;
+    a {
+      display: block;
+      background: url(../../images/heart.svg) center no-repeat;
+      width: 40px;
+      height: 40px;
+      &.tinvwl-product-in-list {
+        background: url(../../images/heart-pink.svg) center no-repeat;
+      }
+    }
+  }
+  .background-image {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin: 0 0 2rem 0;
+    @media screen and (#{$bp-mobile}) {
+      background-size: contain;
+    }
+  }
+  .product-info {
+    color: $dark-grey;
+    position: relative;
+
+    a {
+      color: $dark-grey;
+      &:hover {
+        .background-image {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  .product-info-title {
+    text-transform: none;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin: 1rem 0 0.5rem 0;
+    font-family: $font-bold;
+  }
+  .product-info-price {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+  }
+  ins {
+    text-decoration: none;
+  }
+  .button {
+    margin: auto 0 0 0;
+  }
+}
+
+.tinv-wishlist .tinvwl_add_to_wishlist_button.icon-white:before,
+a.wishlist_products_counter.top_wishlist-white:before,
+span.wishlist_products_counter.top_wishlist-white:before {
+  top: 0;
+  left: 0;
+  margin: 0;
+  color: $dark-grey;
+  font-size: 4rem;
+}
+.tinv-wishlist
+  .tinvwl_add_to_wishlist_button.tinvwl-icon-heart-plus.no-txt:before,
+.tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt:before {
+  color: $dark-grey;
+  top: 0;
+  left: 0;
+}
+.tinv-wishlist
+  .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.tinvwl-product-in-list:before {
+  color: $col3;
+}
+
+.sale {
+  position: relative;
+  .onsale {
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    background: $dark-grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}

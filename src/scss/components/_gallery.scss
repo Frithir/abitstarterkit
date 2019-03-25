@@ -1,0 +1,12 @@
+.full-width-gallery {
+  img {
+    height: auto;
+    width: calc(100% / 3);
+    @media screen and (#{$bp-tablet}) {
+      width: calc(50%);
+    }
+    @media screen and (#{$bp-mobile}) {
+      width: 100%;
+    }
+  }
+}

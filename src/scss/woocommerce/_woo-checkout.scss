@@ -1,0 +1,134 @@
+form.woocommerce-checkout {
+  input,
+  textarea,
+  select {
+    background: white;
+  }
+}
+.woocommerce-checkout {
+  h1 {
+    text-align: center;
+    font-weight: normal;
+  }
+
+  h3 {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    &#ship-to-different-address {
+      &:before {
+        content: 'Delivery is by signature only unless specified.';
+        font-size: 1.3rem;
+        margin: 1rem 0 2rem 0;
+        display: block;
+      }
+      margin: 1rem 0;
+      label {
+        font-weight: bold;
+      }
+    }
+  }
+  #billing_address_1_field:before {
+    //  content: 'Delivery Not Available to Po Boxes or Parcel Lockers.';
+    font-size: 1.3rem;
+    margin: 1rem 0 2rem 0;
+    display: block;
+  }
+}
+
+#customer_details {
+  h2,
+  h3 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+  }
+  .woocommerce-billing-fields {
+    p {
+      min-height: 69px;
+    }
+  }
+}
+
+#ship-to-different-address {
+  font-family: $font-main;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+}
+
+#billing_state_field,
+.form-row-first {
+  float: left;
+  width: 49%;
+}
+#billing_postcode_field,
+.form-row-last {
+  float: right;
+  width: 48%;
+}
+
+.woocommerce-account-fields {
+  clear: both;
+}
+
+#order_review_heading {
+  font-size: 2.2rem;
+  font-weight: normal;
+  margin: 2rem 0;
+}
+
+#payment {
+  padding: 2rem;
+  background: $light-grey;
+  border: 2px solid $mid-grey;
+  border-radius: 8px;
+  input[type='tel'] {
+    background: white;
+  }
+  .button {
+    background: linear-gradient(to right, lighten($col3, 3%) 50%, $col3 50%);
+    background-color: $col3;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    &:hover {
+      background-position: left bottom;
+    }
+  }
+}
+
+.woocommerce-order {
+  ul {
+    padding: 0 0 0 2.4rem;
+  }
+}
+
+.woocommerce-checkout-payment label[for^='eway_expiry_month'] {
+  display: block;
+  clear: both;
+}
+
+.woocommerce-cc-month {
+  float: left;
+  display: inline-block;
+  width: 48%;
+  margin: 0 3% 0 0;
+}
+.woocommerce-cc-year {
+  float: left;
+  display: inline-block;
+  width: 48%;
+  margin: 0;
+}
+
+#vegan_field label {
+  display: inline-block;
+  margin: 0 2rem 0 0;
+}
+
+#billing_address_2_field,
+#billing_company_field {
+  display: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}

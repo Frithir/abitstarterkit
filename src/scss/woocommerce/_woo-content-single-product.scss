@@ -1,0 +1,279 @@
+.single-product {
+  .product {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    @media screen and (#{$bp-tablet}) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.top-split {
+  background-image: linear-gradient(90deg, white 50%, rgba($col4, 0.5) 50%);
+  border-bottom: 1px solid rgba($mid-grey, 0.3);
+  margin: 0 0 4rem 0;
+  @media screen and (#{$bp-tablet}) {
+    margin: 0 0 2rem 0;
+    border-radius: none;
+    background-image: none;
+  }
+}
+
+.woo-gallery {
+  width: calc(50% - 4rem);
+  overflow: hidden;
+  position: relative;
+  @media screen and (#{$bp-tablet}) {
+    margin: 0 auto 3rem auto;
+    width: 100%;
+    background: white;
+  }
+  img {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    display: block;
+  }
+}
+
+.product-video-mobile {
+  display: none;
+}
+
+@media screen and (#{$bp-tablet}) {
+  .product-video-mobile {
+    display: block;
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+  .product-flex {
+    .flex-video {
+      display: none;
+    }
+  }
+}
+
+.woo-details {
+  width: calc(50% - 4rem);
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (#{$bp-tablet}) {
+    width: 100%;
+    margin: 0;
+    background: rgba($col4, 0.5);
+  }
+  .product_title {
+    line-height: 1;
+    font-size: 4rem;
+    text-align: center;
+    @media screen and (#{$bp-tablet}) {
+      text-align: center;
+    }
+  }
+  .price {
+    font-size: 2.5rem;
+    margin: 2rem 0 0 0;
+    color: $dark-grey;
+    text-align: center;
+  }
+  .small-data {
+    font-size: 1.2rem;
+    position: relative;
+    margin: 2rem 0;
+    justify-content: center;
+    .tinvwl-shortcode-add-to-cart {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      a {
+        display: block;
+        background: url(../../images/heart.svg) center no-repeat;
+        background-size: contain;
+        width: 16px;
+        height: 16px;
+        &.tinvwl-product-in-list {
+          background: url(../../images/heart-pink.svg) center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    .tinv-wishlist .tinvwl_add_to_wishlist_button.icon-white:before,
+    a.wishlist_products_counter.top_wishlist-white:before,
+    span.wishlist_products_counter.top_wishlist-white:before {
+      font-size: 2rem;
+    }
+    .save {
+      position: relative;
+      padding: 0 0 0 2rem;
+    }
+  }
+
+  .star-rating {
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem 1rem 0;
+    .star {
+      width: 12px;
+      height: 12px;
+      background: url(../../images/star-grey.svg) 0 0 no-repeat;
+      background-size: contain;
+      margin: 0 0.5rem 0 0;
+    }
+    &.number-1 {
+      .star:nth-child(-n + 1) {
+        background: url(../../images/star.svg) 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+    &.number-2 {
+      .star:nth-child(-n + 2) {
+        background: url(../../images/star.svg) 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+    &.number-3 {
+      .star:nth-child(-n + 3) {
+        background: url(../../images/star.svg) 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+    &.number-4 {
+      .star:nth-child(-n + 4) {
+        background: url(../../images/star.svg) 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+    &.number-5 {
+      .star {
+        background: url(../../images/star.svg) 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  .woocommerce-product-details__short-description {
+    margin: 0 0 2rem 0;
+    text-align: center;
+    font-weight: lighter;
+  }
+
+  .made-with {
+    background: url(../../images/made-with.svg) center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 60px;
+    margin: 4rem 0;
+    display: none;
+  }
+
+  .stock {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+  }
+  .outofstocknotifyme {
+    width: 90%;
+    margin: 0 auto;
+    .custom_message {
+      font-family: $font-script;
+      color: $col3;
+      margin: 0;
+      padding: 0;
+      font-size: 4rem;
+      line-height: 1.2;
+    }
+  }
+  .notifymeptag {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    input {
+      background: white;
+      height: 4.6rem;
+    }
+    input[type='submit'] {
+      @extend .button;
+    }
+  }
+
+  form.cart {
+    margin: 0;
+  }
+  .single_add_to_cart_button {
+    height: 5rem;
+  }
+  .variations {
+    margin: 0;
+    td {
+      padding: 0;
+      vertical-align: top;
+      text-transform: uppercase;
+    }
+    label {
+      padding: 1rem 0 0 0;
+      font-size: 1.3rem;
+    }
+    select {
+      margin: 0;
+    }
+    .reset_variations {
+      font-size: 1rem;
+    }
+  }
+  .woocommerce-variation-add-to-cart {
+    margin: 2rem 0 0 0;
+  }
+  .quantity {
+    margin: 0 2rem 0 0;
+    label {
+      display: none;
+    }
+  }
+  form.cart {
+    align-items: stretch !important;
+    justify-content: center !important;
+    display: flex;
+    flex-wrap: wrap;
+    .wc-points-rewards-product-message {
+      width: 100% !important;
+      display: block;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+  }
+  .custom-meta {
+    margin: 4rem 0 0 0;
+  }
+}
+
+.product_tag-vegan-nail-polish .made-with {
+  display: block;
+}
+
+.popup-open {
+  overflow: hidden;
+}
+
+.woo-related-products {
+  h2 {
+    display: none;
+  }
+  ul.products {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    @media screen and (#{$bp-tablet}) {
+      flex-wrap: wrap;
+    }
+    .product-info,
+    .button {
+      width: 100%;
+    }
+  }
+}

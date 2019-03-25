@@ -1,0 +1,130 @@
+.woocommerce-cart {
+  h1,
+  h2 {
+    text-align: center;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.product-thumbnail img {
+  max-width: 50px;
+  height: auto;
+}
+
+.woocommerce-cart table.shop_table .product-name a {
+  color: $dark-grey !important;
+  text-decoration: underline;
+  &:hover {
+    color: $col2 !important;
+  }
+}
+.tinvwl-table-manage-list,
+.shop_table {
+  border: 2px solid rgba($mid-grey, 0.2);
+  padding: 2rem;
+  border-radius: 8px;
+  a {
+    color: $dark-grey;
+    &:hover {
+      color: $col2;
+    }
+  }
+  label {
+    display: none;
+  }
+  th {
+    background: rgba($mid-grey, 0.5);
+    color: white;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+  }
+  .quantity input {
+    background: transparent;
+    border: 1px solid rgba($mid-grey, 0.2);
+    border-radius: 0.5rem;
+  }
+  .plusminuslabel {
+    display: none;
+  }
+  .actions {
+    .coupon {
+      float: left;
+      display: flex;
+      width: 50%;
+      margin: 0;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+      .input-text {
+        float: left;
+        width: auto;
+        margin: 0;
+      }
+    }
+    .button {
+      float: right;
+      margin: 0;
+      width: 45%;
+    }
+  }
+}
+
+.tinv-wishlist table {
+  border-spacing: 0 !important;
+  td,
+  th {
+    font-size: 1.2rem;
+    border: none !important;
+  }
+}
+
+.tinv-wishlist .product-remove button {
+  line-height: 1;
+}
+
+body.page.page-id-16496 .woocommerce tbody button.button.alt {
+  background-color: $col2 !important;
+  &:hover {
+    background-color: $dark-grey !important;
+  }
+}
+body.page.page-id-16496 .woocommerce tfoot button.button.alt {
+  background-color: $col3 !important;
+  border-color: $col3 !important;
+
+  &:hover {
+    background-color: $mid-grey !important;
+    border-color: $mid-grey !important;
+  }
+}
+
+.woocommerce-cart-form__cart-item {
+  .quantity input {
+    width: 50px;
+  }
+  img {
+    width: 60px;
+    height: auto;
+  }
+}
+
+.checkout-button {
+  float: right;
+  margin: 0;
+}
+
+.payment_method_paypal {
+  img {
+    display: none;
+  }
+}
+
+.shop_table .includes_tax {
+  display: none;
+}
+.AU .shop_table .includes_tax {
+  display: inline-block;
+}

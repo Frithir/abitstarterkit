@@ -1,0 +1,56 @@
+.Accordion--section-title {
+  margin: 4rem 0 0 0;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  font-family: $font-main;
+}
+
+.Accordion {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Accordion--item {
+  position: relative;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba($mid-grey, 0.5);
+}
+
+.Accordion--item h4 {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+
+  letter-spacing: 0.1rem;
+  font-weight: lighter;
+  font-family: $font-main;
+}
+
+.Accordion--item svg {
+  float: right;
+  transition: ease all 0.3s;
+  opacity: 0.5;
+}
+
+.Accordion--item.active svg {
+  transform: rotate(-180deg);
+}
+
+.Accordion--item .description {
+  padding-top: 0;
+  opacity: 0;
+  transition: ease all 0.3s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.Accordion--item.active .description {
+  padding-top: 2rem;
+  opacity: 1;
+  max-height: 5000rem;
+}
+
+.Accordion--item.active h4 {
+  font-weight: bold;
+}

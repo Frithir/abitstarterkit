@@ -1,0 +1,211 @@
+body {
+  padding-top: 110px;
+  @media screen and (#{$bp-tablet}) {
+    padding-top: 63px;
+  }
+}
+
+.header {
+  width: 100%;
+  background: white;
+  z-index: 99;
+  overflow: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  transition: padding 0.2s ease;
+  border-bottom: $light-grey 1px solid;
+  transition: height 0.5s ease;
+  .container {
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    padding: 2rem 0 0 0;
+    @media screen and (#{$bp-tablet}) {
+      width: 100%;
+      padding: 0 0.5rem;
+    }
+    a {
+      color: $dark-grey;
+      &:hover {
+        color: $col2;
+      }
+    }
+  }
+  .shipping-notice {
+    background: rgba($col4, 0.5);
+    text-align: center;
+    padding: 0 0 0.5rem 0;
+    letter-spacing: 0.2rem;
+    font-family: $font-main;
+    color: $dark-grey;
+    @media screen and (#{$bp-tablet}) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (#{$bp-tablet}) {
+  .home .shipping-notice {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $col4;
+    width: 100%;
+  }
+}
+
+.header-sides {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: visible;
+  flex-wrap: nowrap;
+  @media screen and (#{$bp-desktop}) {
+    justify-content: flex-end;
+    padding: 0 2rem 0 0;
+    .menu {
+      display: none;
+    }
+  }
+  @media screen and (#{$bp-tablet}) {
+    display: none;
+  }
+}
+
+.search-link {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.header .menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  padding: 0;
+  font-weight: lighter;
+  li {
+    margin: 0;
+    padding: 0 1rem 1rem;
+    position: relative;
+  }
+  a {
+    color: $dark-grey;
+    font-size: 1.3rem;
+    &:hover {
+      color: $col2;
+    }
+  }
+  .sub-menu {
+    list-style: none;
+    margin: 0;
+    padding: 3rem 2rem 1.2rem 2rem;
+    position: absolute;
+    top: 2rem;
+    left: -1rem;
+    background: white;
+    width: 250px;
+    display: none;
+    li {
+      display: block;
+    }
+    a {
+      display: block;
+    }
+  }
+  .menu-item-has-children:hover .sub-menu {
+    display: block;
+  }
+}
+
+.logo {
+  width: auto;
+  height: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 4rem;
+  flex-shrink: 0;
+  @media screen and (#{$bp-tablet}) {
+    margin: 1rem 0;
+  }
+
+  img {
+    width: 50px;
+    height: 100%;
+    margin: 0 auto;
+    @media screen and (#{$bp-tablet}) {
+      width: 35px;
+    }
+  }
+}
+
+.woo-tools {
+  position: relative;
+  margin: -1rem 0 0 auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  z-index: 20;
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  svg {
+    margin: 0 1rem;
+  }
+  .tools {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.cart-contents {
+  margin: 0 4rem 0 1rem;
+  @media screen and (#{$bp-mobile}) {
+    margin: 0 2rem 0 0;
+  }
+  a {
+    position: relative;
+    display: block;
+    padding: 1rem 0 0.5rem 0;
+  }
+  .fa {
+    font-size: 2rem;
+  }
+  .in-cart {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: $col2;
+    border-radius: 100%;
+    font-size: 11px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+  }
+}
+@media screen and (#{$bp-tablet}) {
+  .open-nav .cart-contents {
+    a {
+      color: white;
+    }
+    .in-cart {
+      background: white;
+      color: $col2;
+    }
+  }
+}
+.current-product_cat-ancestor a,
+.current-page-parent a,
+.current-menu-item a {
+  position: relative;
+  color: $col3;
+}

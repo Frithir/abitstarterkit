@@ -1,0 +1,28 @@
+.testimonial-section {
+  background: $col5;
+  color: $col2;
+  overflow: hidden;
+  .slide {
+    width: 100%;
+  }
+  h2 {
+    margin: 0;
+  }
+  blockquote {
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+  }
+  .flickity-prev-next-button {
+
+  }
+  .flickity-page-dots {
+    text-align: left;
+    bottom: -3rem;
+    left: 4rem;
+    .dot {
+      border-radius: 0%;
+      border: 2px black solid;
+    }
+  }
+}

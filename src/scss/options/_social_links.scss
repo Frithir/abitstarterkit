@@ -1,0 +1,26 @@
+.social_links {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+  @extend .flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media screen and (#{$bp-tablet}) {
+    justify-content: center;
+    margin: 0;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    padding: 0.2rem 0 0 0;
+    text-align: center;
+    color: $dark-grey;
+    &:hover {
+      color: $col2;
+    }
+  }
+}

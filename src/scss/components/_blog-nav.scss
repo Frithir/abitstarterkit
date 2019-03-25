@@ -1,0 +1,28 @@
+.blog-nav--section {
+  background: white;
+}
+
+.blog-nav--list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  li {
+    margin: 0 1rem;
+  }
+  a {
+    color: $dark-grey;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    &:hover {
+      color: $col3;
+    }
+  }
+  .current-cat a {
+    color: $col3;
+  }
+}

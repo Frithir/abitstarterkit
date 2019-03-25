@@ -1,0 +1,164 @@
+form {
+  font-family: $font-main;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Form
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+textarea,
+select {
+  appearance: none; // Removes awkward default styles on some inputs for iOS
+  background-color: transparent;
+  border: 0.1rem solid rgba($mid-grey, 0.5);
+  box-shadow: none;
+  box-sizing: border-box;
+  height: 3.8rem;
+  padding: 0.6rem 1rem; // The .6rem vertically centers text on FF, ignored by Webkit
+  width: 100%;
+  &:focus {
+    border: 0.1rem solid $col2;
+    outline: 0;
+  }
+}
+
+textarea {
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  min-height: 6.5rem;
+}
+
+label,
+legend {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.gift-certificate-show-form,
+.woocommerce-checkout-payment,
+.wc-credit-card-form {
+  label {
+    display: inline;
+  }
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: inline;
+}
+
+.label-inline {
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.gform_ajax_spinner {
+  display: block;
+  margin: 1rem auto;
+  height: 20px;
+  width: 20px;
+}
+
+.validation_error,
+.gform_confirmation_message {
+  width: 100%;
+  padding: 1rem;
+  background: white;
+  border: 1px solid $light-grey;
+  margin: 1.5rem 0;
+  font-weight: 500;
+
+  &:before {
+    content: '\f06a';
+    font-family: 'FontAwesome';
+    margin-right: 5px;
+    color: $col2;
+  }
+}
+
+.gform_confirmation_message {
+  &:before {
+    content: '\f164';
+    font-family: 'FontAwesome';
+    margin-right: 5px;
+    color: $col2;
+  }
+}
+
+.validation_message {
+  background: white;
+  font-weight: 500;
+  border: 1px solid $light-grey;
+
+  &:before {
+    content: '\f06a';
+    font-family: 'FontAwesome';
+    margin-right: 5px;
+    color: $col2;
+  }
+}
+
+#gform_2 {
+  width: 100%;
+  max-width: 450px;
+  label {
+    display: none;
+  }
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    background: $light-grey;
+    border: none;
+    outline: none;
+  }
+  .button {
+    width: 100%;
+    max-width: 120px;
+    float: right;
+  }
+}
+
+.search-drop-down {
+  position: relative;
+  opacity: 0;
+  transition: ease all 0.3s;
+  max-height: 0;
+  form {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 5.1rem;
+    left: -3rem;
+  }
+  input {
+    margin: 0;
+    padding: 0 1rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.3rem;
+  }
+  &.active {
+    opacity: 1;
+    max-height: 50rem;
+  }
+}
+
+#field_2_5,
+#field_1_3 {
+  display: none;
+}

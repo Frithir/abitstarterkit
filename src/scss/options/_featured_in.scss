@@ -1,0 +1,39 @@
+a.featured-link {
+  position: relative;
+  display: block;
+  width: calc(100% / 4 - 2rem);
+  text-align: center;
+  text-transform: uppercase;
+  color: $col2;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  @media screen and (#{$bp-tablet}) {
+    width: calc(50% - 2rem);
+  }
+  @media screen and (#{$bp-mobile}) {
+    width: 100%;
+  }
+  .hover {
+    position: relative;
+    top: 0;
+  }
+  &:hover {
+    .hover {
+      top: -.5rem;
+    }
+    img {
+      opacity: 0.5;
+    }
+  }
+  * {
+    transition: all .6s ease-out;
+  }
+  img {
+    position: relative;
+    top: 0;
+    display: block;
+    width: auto;
+    height: 50px;
+    margin: 2rem auto;
+  }
+}

@@ -1,0 +1,21 @@
+// Blockquote
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+blockquote {
+  margin: 2rem 0 4rem 0 !important;
+  padding: 0;
+  p {
+    padding: 0;
+    margin: 0;
+    font-family: $font-script;
+    font-size: 2rem;
+    line-height: 1;
+    color: $col3;
+    @media screen and (#{$bp-tablet}) {
+      font-size: 4rem;
+    }
+    @media screen and (#{$bp-mobile}) {
+      font-size: 3rem;
+    }
+  }
+}

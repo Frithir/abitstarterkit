@@ -1,0 +1,21 @@
+.addthis ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  opacity: 0.5;
+  margin: 1rem 0;
+  > * {
+    margin-bottom: 0;
+    + * {
+      margin-left: 1rem;
+    }
+  }
+
+  &:nth-child(1) {
+    font-family: $font-main;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+}

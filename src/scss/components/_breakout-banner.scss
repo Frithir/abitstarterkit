@@ -1,0 +1,43 @@
+.home-breakout-banner {
+  background: url(images/breakout-banner.jpg) center no-repeat;
+  background-size: cover;
+  padding: 0 !important;
+  .container {
+    padding: 0;
+  }
+  .one-half {
+    overflow: hidden;
+  }
+  h2 {
+    margin: 2rem auto;
+    width: 80%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
+.breakout-banner {
+  position: relative;
+  background-size: cover !important;
+  .container {
+    padding: 0;
+    text-align: center;
+    color: white;
+  }
+  h2 {
+    margin: 2rem auto;
+    width: 80%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .button {
+    color: white;
+  }
+}

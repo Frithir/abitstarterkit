@@ -1,0 +1,35 @@
+// Base
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// The base font-size is set at 62.5% for having the convenience
+// of sizing rems in a way that is similar to using px. 1.6rem=16px
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  color: $dark-grey;
+  font-family: $font-main;
+  font-size: 1.6em; // currently ems cause chrome bug misinterpreting rems on body element
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background: rgba($col4, 0.5);
+  @media screen and (#{$bp-tablet}) {
+    font-size: 1.4rem;
+  }
+}
+body.post-type-archive-product,
+body.tax-product_cat,
+body.single-product {
+  background: transparent;
+}
+
+// Box Sizing FTW
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}

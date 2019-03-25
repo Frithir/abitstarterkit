@@ -1,0 +1,12 @@
+
+// Link
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+a {
+	color: $col2;
+	text-decoration: none;
+
+	&:hover {
+		color: $col3;
+	}
+}

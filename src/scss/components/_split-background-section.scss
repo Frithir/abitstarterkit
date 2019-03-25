@@ -1,0 +1,22 @@
+.split-background-section {
+  background: white;
+  background-image: linear-gradient($light-grey 60%, white 60% );
+  .one-half {
+    overflow: hidden;
+    width: 48%;
+  }
+  h2 {
+    margin: 2rem auto;
+    width: 80%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border: 2rem solid white;
+  }
+  .button {
+    text-align: left;
+    display: block;
+    margin: 2rem 0;
+  }
+}

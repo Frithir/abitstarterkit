@@ -1,0 +1,102 @@
+.pum-container {
+  background-image: url(/wp-content/themes/picturepolish/images/footer-wrap.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: -100px 200px !important;
+  padding: 5rem 0 !important;
+  min-height: 500px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (#{$bp-tablet}) {
+    min-height: 400px !important;
+  }
+  @media screen and (#{$bp-mobile}) {
+    min-height: 200px !important;
+  }
+
+  .pum-title {
+    font-family: $font-script !important;
+    color: $col2 !important;
+    font-size: 6rem !important;
+    line-height: 0.7 !important;
+    font-weight: lighter !important;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    @media screen and (#{$bp-desktop}) {
+      font-size: 5.5rem !important;
+    }
+    @media screen and (#{$bp-tablet}) {
+      font-size: 4.5rem !important;
+    }
+    @media screen and (#{$bp-mobile}) {
+      font-size: 3.5rem !important;
+    }
+  }
+
+  .gform_body ul {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  .gform_body li {
+    margin: 0 0 0 1rem;
+  }
+  .gform_body li:nth-child(1) {
+    width: 30%;
+  }
+  .gform_body li:nth-child(2) {
+    width: 70%;
+  }
+  .gform_footer {
+    text-align: center;
+    flex-shrink: 0;
+    margin: 0;
+    @media screen and (#{$bp-tablet}) {
+      width: 100%;
+      .button {
+        width: calc(100% - 1rem);
+        margin: 1rem 0 1rem 1rem;
+      }
+    }
+  }
+
+  input[type='email'],
+  select {
+    background: white;
+    margin: 0;
+    padding: 0 1rem;
+    border: none !important;
+    border-radius: 0;
+    color: $mid-grey;
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+    border: $mid-grey 1px solid;
+  }
+  select {
+    background: white url(../../images/select.svg) 90% center no-repeat;
+  }
+  label {
+    display: none;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    @media screen and (#{$bp-tablet}) {
+      flex-direction: column;
+    }
+    label {
+      display: none;
+    }
+  }
+
+  .help {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,82 @@
+/*
+Theme Name: Abit starter kit
+Author: AlexF @ Thrive web design
+Author URI: https://thriveweb.com.au/
+Version: 1.0.1
+*/
+
+// @font-face {
+//   font-family: 'Just Lovely';
+//   src: url('/wp-content/themes/picturepolish/src/fonts/JustLovely.woff2')
+//       format('woff2'),
+//     url('/wp-content/themes/picturepolish/src/fonts/JustLovely.woff')
+//       format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Madera';
+//   src: url('/wp-content/themes/picturepolish/src/fonts/Madera-Bold.woff2')
+//       format('woff2'),
+//     url('/wp-content/themes/picturepolish/src/fonts/Madera-Bold.woff')
+//       format('woff');
+//   font-weight: bold;
+//   font-style: normal;
+// }
+
+// Sass Modules
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import '_Normalize';
+@import '_Functions';
+@import '_Variables';
+@import '_Color';
+@import '_Anim';
+@import '_Base';
+@import '_Blockquote';
+@import '_Button';
+@import '_Code';
+@import '_Form';
+@import '_Grid';
+@import '_Link';
+@import '_List';
+@import '_Misc';
+@import '_Spacing';
+@import '_Table';
+@import '_Typography';
+@import '_Utility';
+
+// @import '_Popupmaker';
+
+@import 'components/edit';
+@import 'components/pagination';
+@import 'components/share';
+@import 'components/blog-nav';
+@import 'components/addthis';
+@import 'components/splitTitle';
+// @import "components/map";
+// @import "components/featured-slider";
+// @import "components/grid-layout";
+// @import "components/comments";
+// @import 'components/flickity';
+// @import 'components/magnific';
+@import 'components/accordion';
+@import 'components/card-post';
+@import 'components/card-product';
+
+@import 'layouts/header';
+@import 'layouts/mobile-nav';
+@import 'layouts/footer';
+@import 'layouts/page-header';
+@import 'layouts/content-layouts';
+
+@import 'options/subscribe';
+@import 'options/social_links';
+
+@import 'pages/home';
+@import 'pages/contact';
+@import 'pages/blog';
+@import 'pages/single-post';
+@import 'pages/rewards';
+
+@import 'woocommerce/woocommerce';

@@ -1,0 +1,44 @@
+.content-layouts {
+  width: 100%;
+  .layouts {
+    margin: 0 0 4rem 0;
+    ul {
+      list-style: none;
+      margin: 0;
+      li {
+        position: relative;
+        &:before {
+          content: ' • ';
+          color: $col3;
+        }
+      }
+    }
+    @media screen and (#{$bp-tablet}) {
+      &.flex-start {
+        display: block;
+      }
+    }
+    .one-half {
+      margin: 0;
+      @media screen and (#{$bp-tablet}) {
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+    }
+    .gallery {
+      img {
+        max-width: 50%;
+        height: auto;
+        margin: 0 1rem;
+        @media screen and (#{$bp-tablet}) {
+          max-width: 80%;
+          margin: 0 0.3rem;
+        }
+        @media screen and (#{$bp-mobile}) {
+          max-width: 100%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
