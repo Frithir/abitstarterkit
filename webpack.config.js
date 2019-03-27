@@ -5,7 +5,7 @@ const path = require('path'),
   BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
   StyleLintPlugin = require('stylelint-webpack-plugin');
 
-const proxy = 'http://abitstartkit.localhost';
+const proxy = 'http://abitstarterkit.localhost';
 
 module.exports = {
   context: __dirname,

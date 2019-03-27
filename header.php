@@ -9,16 +9,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+	<!-- remove dev bg -->
 	<div class="background-image" style="background-image: url('<?php bloginfo('stylesheet_directory') ?>/images/uploads/themebg0.jpg'); height: 100vh; width: 100%; position: fixed"></div>
-
-	<?php get_template_part( 'components/inc-edit' ); ?>
-
-	<header class="header">
-		<div class="container">
-			<a class="logo" href="<?= esc_url( home_url() ); ?>">
-				<img class="default-logo" src="<?= esc_url( get_template_directory_uri() ) . '/images/logo.svg'; ?>" alt="<?php bloginfo('name'); ?> "/>
-			</a>
-			<?php get_template_part( 'layouts/header-shop' ); ?>
-		</div>
-	</header>
+	<?php
+		get_template_part( 'components/inc-edit' );
+		get_template_part( 'layouts/header-shop' );
+	?>
