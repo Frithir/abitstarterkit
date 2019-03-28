@@ -1,47 +1,53 @@
-import plyr from 'plyr'
-import { iconUrl } from './_video'
-
-const popupClassName = 'video-popup-content'
-
 export default () => {
+  const popupClassName = 'video-popup',
+    popupButtons = [...document.querySelectorAll('.video-opener')]
 
-  const popupButtons = [...document.querySelectorAll('.popup')]
   if (!popupButtons) return
 
-  const addListeners = (popupElement) => {
-    window.addEventListener('keydown', removeVideo)
-    popupElement.addEventListener('click', removeVideo)
-  }
+  const addListeners = popupElement => {
+      window.addEventListener('keydown', removeVideo)
+      popupElement.addEventListener('click', removeVideo)
+    },
+    removeVideo = e => {
+      if (
+        e.type === 'click' &&
+        !e.target.classList.contains(popupClassName) &&
+        !e.target.classList.contains('close')
+      )
+        return
+      if (e.type === 'keydown' && e.key !== 'Escape') return
 
-  const removeVideo = (e) => {
-    if (e.type === 'click' && !e.target.classList.contains(popupClassName)) return
-    if (e.type === 'keydown' && e.key !== 'Escape') return
-    const popupElement = document.querySelector(`.${popupClassName}`)
-    popupElement.remove()
-    window.removeEventListener('keydown', removeVideo)
-  }
+      const popupElement = document.querySelector(`.${popupClassName}`)
 
-  const openPopup = function(e) {
-    e.preventDefault()
+      popupElement.classList.remove('active')
 
-    const html = `
-      <div class="container">
-        <div data-type="youtube" data-video-id="${this.dataset.videoid}"></div>
-      </div>
-    `
+      setTimeout(() => {
+        popupElement.remove()
+        window.removeEventListener('keydown', removeVideo)
+      }, 300)
+    },
+    openPopup = e => {
+      e.preventDefault()
 
-    const popup = document.createElement('div')
-    popup.classList.add(popupClassName)
-    popup.innerHTML = html
+      const html = `
+      <div class="close"></div>
+      <video controls autoplay>
+        <source src="${e.target.attributes.href.value}" type="video/mp4">
+      </video>
+    `,
+        popup = document.createElement('div')
 
-    document.body.appendChild(popup)
-    plyr.setup(popup, {
-      iconUrl
-    })
+      popup.classList.add(popupClassName)
+      popup.innerHTML = html
 
-    addListeners(popup)
-  }
+      document.body.appendChild(popup)
+
+      setTimeout(() => {
+        popup.classList.add('active')
+      }, 300)
+
+      addListeners(popup)
+    }
 
   popupButtons.forEach(btn => btn.addEventListener('click', openPopup))
-
 }

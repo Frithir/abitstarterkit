@@ -16,5 +16,8 @@
         .parent()
         .addClass('active')
     }
+    setTimeout(() => {
+      $(document.body).trigger('sticky_kit:recalc')
+    }, 300)
   })
 })(jQuery)

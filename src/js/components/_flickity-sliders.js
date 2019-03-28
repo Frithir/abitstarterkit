@@ -1,13 +1,13 @@
-import Flickity from 'flickity-imagesloaded'
+/* globals jQuery flickity-imagesloaded  */
 
 export default () => {
   (function() {
-    const fullwidthGallery = document.querySelector('.featured-slider')
+    const fullwidthGallery = document.querySelector('.featured-slider');
     if (!fullwidthGallery) {
-      return
+      return;
     }
-    const slides = fullwidthGallery.querySelectorAll('.overview-block-product')
-    if (fullwidthGallery && slides.length > 1) {
+    const slides = fullwidthGallery.querySelectorAll('.overview-block-product');
+    if (fullwidthGallery && 1 < slides.length) {
       new Flickity(fullwidthGallery, {
         setGallerySize: true,
         wrapAround: true,
@@ -24,9 +24,9 @@ export default () => {
           y2: 45,
           x3: 15
         }
-      })
+      });
     } else {
-      fullwidthGallery.classList.remove('flickity')
+      fullwidthGallery.classList.remove('flickity');
     }
-  })()
-}
+  })();
+};

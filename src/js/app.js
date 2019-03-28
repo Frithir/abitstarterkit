@@ -1,37 +1,45 @@
-/* globals require */
+/* globals jQuery */
 
-// const AOS = require('aos');
-// import allSlider from './components/_flickity-sliders';
-// import gallerySlider from './components/_featured-slider';
+import allSlider from './components/_flickity-sliders';
+import gallerySlider from './components/_featured-slider';
+import instagramFeed from './components/_InstagramFeed-slider';
+import gallery from './components/_Gallery';
 
-// import lazyLoad from './_lazyLoad';
-// import homeNav from './_home-nav';
-// import popup from './_popup';
-// import wooSidebar from './_wooSidebar';
+import lazyLoad from './_lazyLoad';
+import homeNav from './_home-nav';
+import popup from './_popup';
+import navScroll from './_navScroll';
+import storeLocator from './components/_storeLocator';
+import popupVideo from './_popupVideo';
 
-// import './_mobileNav';
-// import './_quantity';
-// import './_tab';
-// import './components/_accordion';
-// import './components/_search-dropdown';
+import './_mobileNav';
+import './_quantity';
+import './_tab';
+import './components/_accordion';
+import './components/_search-dropdown';
+import './components/_woo-gallery';
 
 function init() {
-  console.log('Hello, check out app.js');
-  // allSlider();
-  // gallerySlider();
-  // lazyLoad();
-  // homeNav();
-  // popup();
-  // wooSidebar();
+  jQuery('input[type="submit"]').each((i, e) => {
+    let attrStr = '',
+      text = '';
+    jQuery.each(e.attributes, function(i, elem) {
+      if ('value' === elem.name) text = elem.value;
+      else attrStr += ' ' + elem.name + '="' + elem.value + '"';
+    });
+    jQuery(e).replaceWith('<button' + attrStr + '>' + text + '</button>');
+  });
 
-  // AOS.init({
-  //   offset: 200,
-  //   duration: 300,
-  //   easing: 'ease-in-sine',
-  //   delay: 80,
-  //   disable: 'tablet',
-  //   once: true
-  // });
+  storeLocator();
+  allSlider();
+  gallerySlider();
+  instagramFeed();
+  lazyLoad();
+  homeNav();
+  popup();
+  navScroll();
+  gallery();
+  popupVideo();
 }
 
 init();
