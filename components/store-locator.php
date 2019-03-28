@@ -44,7 +44,7 @@
 	);
 	endwhile;
 	$args = array(
-		"api_key" => "AIzaSyCLI3cT9LcczYAvF_trirgUGGfvhJJNhAs",
+		"api_key" => "xxx",
 		"options" => array(
 			"scrollwheel" => false,
 			"draggable" => true,

@@ -1,12 +1,12 @@
 <?php
 // ACF Google Maps
 function acf_scripts(){
-  wp_enqueue_script( 'maps', 'https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDJYspP2AZKaXukHbxyX4qdvqibk15vyuI', null, null, true);
+  wp_enqueue_script( 'maps', 'https://maps.googleapis.com/maps/api/js?libraries=places&key=xxx', null, null, true);
 }
 add_action( 'wp_enqueue_scripts', 'acf_scripts' );
 
 function my_acf_init() {
-  acf_update_setting('google_api_key', 'AIzaSyDJYspP2AZKaXukHbxyX4qdvqibk15vyuI');
+  acf_update_setting('google_api_key', 'xxx');
 }
 add_action('acf/init', 'my_acf_init');
 
