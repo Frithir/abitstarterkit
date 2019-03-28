@@ -195,12 +195,12 @@
       height: 16px;
       a {
         display: block;
-        background: url(../images/heart.svg) center no-repeat;
+        background: url(../../images/heart.svg) center no-repeat;
         background-size: contain;
         width: 16px;
         height: 16px;
         &.tinvwl-product-in-list {
-          background: url(../images/heart-pink.svg) center no-repeat;
+          background: url(../../images/heart-pink.svg) center no-repeat;
           background-size: contain;
         }
       }
@@ -223,37 +223,37 @@
     .star {
       width: 12px;
       height: 12px;
-      background: url(../images/star-grey.svg) 0 0 no-repeat;
+      background: url(../../images/star-grey.svg) 0 0 no-repeat;
       background-size: contain;
       margin: 0 0.5rem 0 0;
     }
     &.number-1 {
       .star:nth-child(-n + 1) {
-        background: url(../images/star.svg) 0 0 no-repeat;
+        background: url(../../images/star.svg) 0 0 no-repeat;
         background-size: contain;
       }
     }
     &.number-2 {
       .star:nth-child(-n + 2) {
-        background: url(../images/star.svg) 0 0 no-repeat;
+        background: url(../../images/star.svg) 0 0 no-repeat;
         background-size: contain;
       }
     }
     &.number-3 {
       .star:nth-child(-n + 3) {
-        background: url(../images/star.svg) 0 0 no-repeat;
+        background: url(../../images/star.svg) 0 0 no-repeat;
         background-size: contain;
       }
     }
     &.number-4 {
       .star:nth-child(-n + 4) {
-        background: url(../images/star.svg) 0 0 no-repeat;
+        background: url(../../images/star.svg) 0 0 no-repeat;
         background-size: contain;
       }
     }
     &.number-5 {
       .star {
-        background: url(../images/star.svg) 0 0 no-repeat;
+        background: url(../../images/star.svg) 0 0 no-repeat;
         background-size: contain;
       }
     }
@@ -265,7 +265,7 @@
   }
 
   .made-with {
-    background: url(../images/made-with.svg) center no-repeat;
+    background: url(../../images/made-with.svg) center no-repeat;
     background-size: contain;
     width: 100%;
     height: 60px;
