@@ -8,10 +8,6 @@
     <div class="background-image" style="background-image: url(<?= $featimg[0]; ?>);"></div>
   </section>
 
-  <div class="single-post--back-btn container skinny">
-    <a class="single-post--back-btn--btn" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><i class="fa fa-angle-left"></i> BACK</a>
-  </div>
-
   <section class="single-post--container container skinny white">
     <div class="single-post--heading">
       <h1 class="single-post--title"><?php the_title(); ?></h1>
@@ -21,7 +17,7 @@
       </div>
     </div>
 
-    <?php get_template_part( 'layouts/content-layouts' ); ?>
+    <?php the_content(); ?>
 
     <div class="single-post--footer">
       <?php get_template_part( 'components/share' ); ?>

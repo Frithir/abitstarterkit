@@ -9,9 +9,12 @@
   }
 }
 
-.product-thumbnail img {
-  max-width: 50px;
-  height: auto;
+.product-thumbnail {
+  display: none !important;
+  img {
+    max-width: 50px;
+    height: auto;
+  }
 }
 
 .woocommerce-cart table.shop_table .product-name a {
@@ -21,6 +24,7 @@
     color: $col2 !important;
   }
 }
+
 .tinvwl-table-manage-list,
 .shop_table {
   border: 2px solid rgba($mid-grey, 0.2);
@@ -69,6 +73,18 @@
       margin: 0;
       width: 45%;
     }
+  }
+}
+
+.shop_table {
+  dt,
+  dd,
+  p {
+    margin: 0;
+    display: inline;
+  }
+  dt {
+    font-weight: bold;
   }
 }
 

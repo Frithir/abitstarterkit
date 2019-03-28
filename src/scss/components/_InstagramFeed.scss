@@ -1,39 +1,42 @@
 .InstagramFeed {
   text-align: center;
   width: 100%;
+  position: relative;
 }
 
 .InstagramFeed--row {
-  width: 100%;
+  width: calc(100% - 20rem);
   overflow: hidden;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin: 0 0 1rem 0;
-}
+  margin: 0 auto;
 
-.InstagramFeed--title {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 1.8rem;
-  color: $col2;
-  @media screen and (#{$bp-tablet}) {
-    text-align: center;
-  }
-  i {
-    font-size: 2em;
-    vertical-align: middle;
+  @media screen and (#{$bp-desktophd}) {
+    width: 100%;
   }
 }
 
 .InstagramFeed--item {
   display: block;
   position: relative;
-  width: calc(33.33% - 1rem);
-  margin: 0 0.5rem 1rem 0.5rem;
+  margin: 0 1.5rem;
+  width: 22rem;
+  height: 22rem;
+  @media screen and (#{$bp-desktophd}) {
+    margin: 0 0.5rem;
+  }
+  @media screen and (#{$bp-tablet}) {
+    width: 18rem;
+    height: 18rem;
+  }
+  @media screen and (#{$bp-tablet}) {
+    width: 14rem;
+    height: 14rem;
+  }
+  @media screen and (#{$bp-mobile}) {
+    width: calc(50vw - 1rem);
+    height: calc(50vw - 1rem);
+  }
   &:after {
-    content: "";
+    content: '';
     display: block;
     padding-bottom: 100%;
   }

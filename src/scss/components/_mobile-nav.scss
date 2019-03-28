@@ -128,11 +128,13 @@
 
       .menu-item {
         padding: 0;
+
         a {
           font-size: 3rem;
           padding: 2rem 0;
           font-weight: 200;
           color: $col4;
+
           @media screen and (#{$bp-phablet}) {
             font-size: 2.2rem;
           }

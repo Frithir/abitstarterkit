@@ -151,7 +151,7 @@
       left: 0;
       width: 5rem;
       height: 5rem;
-      background: url(../../images/select.svg) center no-repeat;
+      background: url(../images/select.svg) center no-repeat;
       display: block;
     }
   }
@@ -174,4 +174,15 @@
   form.cart:not(.bundle_form)
   .single_add_to_cart_button {
   margin: 0;
+}
+
+.woocommerce-form-login {
+  width: 100%;
+  max-width: 45rem;
+  .woocommerce-form-row {
+    position: relative;
+    input {
+      background: $col2;
+    }
+  }
 }

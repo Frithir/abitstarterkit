@@ -1,0 +1,287 @@
+.subscribe-section {
+  background: $col2;
+  position: relative;
+  pointer-events: all;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (#{$bp-desktop}) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.instagram-section {
+  background: white;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    display: block;
+    background: #f8f8f8;
+    z-index: -1;
+  }
+  .container {
+    overflow: visible;
+    position: relative;
+    @media screen and (#{$bp-tablet}) {
+      padding: 0;
+    }
+    .follow-ig {
+      font-family: $font-script;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $col1;
+      display: block;
+      position: absolute;
+      transform: rotate(-90deg) translateX(-75%);
+      @media screen and (#{$bp-desktophd}) {
+        display: none;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        margin-left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15rem;
+        height: 2px;
+        background: rgba($col1, 0.5);
+      }
+    }
+  }
+}
+.footer {
+  padding: 5rem 0 0;
+  color: $col3;
+  pointer-events: all;
+  .container {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 4rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+
+    .logoBox {
+      @media screen and (#{$bp-phablet}) and (#{$bp-larger-than-mobile}) {
+        position: absolute;
+        left: 50%;
+        bottom: 7rem;
+        img {
+          margin: 0;
+        }
+      }
+      @media screen and (#{$bp-mobile}) {
+        width: 100% !important;
+      }
+    }
+
+    .two-thirds {
+      max-width: 75rem;
+      @media screen and (#{$bp-phablet}) {
+        padding: 0 1rem;
+        &.logoBox {
+          position: absolute;
+        }
+        .one-third {
+          width: 50%;
+        }
+      }
+      @media screen and (#{$bp-mobile}) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .two-thirds {
+        width: 100%;
+      }
+      .one-third.taright {
+        width: 100%;
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .social_links {
+          justify-content: center;
+        }
+      }
+    }
+    @media screen and (#{$bp-tablet}) {
+      .two-thirds {
+        width: 100%;
+        flex-wrap: wrap;
+        .one-quarter {
+          width: calc(50% - 4rem);
+          margin: 2rem;
+        }
+      }
+      .one-third.taright {
+        width: 100%;
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .social_links {
+          justify-content: center;
+        }
+      }
+    }
+    @media screen and (#{$bp-mobile}) {
+      .one-third.taright {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  a {
+    color: $mid-grey;
+    font-size: 1.4rem;
+    font-weight: 300;
+    &:hover {
+      color: $col1;
+    }
+  }
+  p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+
+  .button {
+    margin-top: 0.75rem !important;
+    a {
+      color: $mid-grey;
+      position: relative;
+      font-size: 1.2rem;
+      padding: 0.1rem 1rem;
+      display: block;
+      z-index: 1;
+    }
+  }
+
+  h3 {
+    color: $dark-grey;
+    margin: 0 0 1rem 0 !important;
+    font-size: 1.4rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem !important;
+    font-weight: bold;
+    @media screen and (#{$bp-phablet}) {
+      margin: 2rem 0 1rem !important;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    li {
+      margin: 0 0 0.2rem 0;
+      padding: 0;
+    }
+  }
+
+  .social_links {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+    @extend .flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (#{$bp-phablet}) {
+      justify-content: flex-start;
+      margin: 0;
+    }
+    @media screen and (#{$bp-mobile}) {
+      justify-content: center;
+    }
+    li {
+      margin: 0;
+      padding: 0;
+      @media screen and (#{$bp-phablet}) {
+        &:first-of-type a {
+          margin-left: 0;
+        }
+      }
+    }
+    a {
+      display: inline-block;
+      margin: 0 1.2rem;
+      padding: 0.2rem 0 0 0;
+      text-align: center;
+      color: $col1;
+      font-size: 2rem;
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+  }
+  .payments {
+    width: 300px;
+    height: auto;
+    @media screen and (#{$bp-mobile}) {
+      max-width: 90%;
+      width: 100%;
+    }
+  }
+}
+
+.copy {
+  color: white;
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+  pointer-events: all;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  @media screen and (#{$bp-tablet}) {
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  .container {
+    justify-content: center;
+    color: $dark-grey;
+    @media screen and (#{$bp-tablet}) {
+      flex-direction: column;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      color: $dark-grey;
+      &:hover {
+        color: $col1;
+      }
+    }
+  }
+}

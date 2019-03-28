@@ -1,7 +1,12 @@
 .woocommerce-account {
-  .skinny .woocommerce {
+  .header-banner {
+    padding-top: 10rem;
+  }
+
+  .thin .woocommerce {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 10rem;
     h2 {
       width: 100%;
     }

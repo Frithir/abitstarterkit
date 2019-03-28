@@ -1,71 +1,171 @@
 .single-post {
-  background: $light-grey;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.3;
+    font-weight: 100;
+    letter-spacing: 6px;
+    margin-bottom: 0;
+  }
+  h1 {
+    font-size: 5rem;
+    @media screen and (#{$bp-tablet}) {
+      font-size: 3rem;
+    }
+  }
+
+  h2 {
+    font-size: 4.25rem;
+    @media screen and (#{$bp-tablet}) {
+      font-size: 2.75rem;
+    }
+  }
+
+  h3 {
+    font-size: 3.6rem;
+    @media screen and (#{$bp-tablet}) {
+      font-size: 2.5rem;
+    }
+  }
+
+  h4 {
+    font-size: 3rem;
+    line-height: 1.3;
+    @media screen and (#{$bp-tablet}) {
+      font-size: 2.25rem;
+    }
+  }
+
+  h5 {
+    font-size: 2.5rem;
+    @media screen and (#{$bp-tablet}) {
+      font-size: 2rem;
+    }
+  }
+
+  h6 {
+    font-size: 2rem;
+    @media screen and (#{$bp-tablet}) {
+      font-size: 1.75rem;
+    }
+  }
+
+  .Accordion--item h4 {
+    font-size: 1.5rem;
+  }
+
+  .pagination {
+    border-top: 1px solid $dark-grey;
+    border-bottom: 1px solid $dark-grey;
+    padding: 1rem 0;
+
+    .pagination--button a {
+      border-bottom: 0;
+      padding: 0;
+      font-family: $font-script;
+      font-weight: 300;
+      font-size: 1.4rem;
+    }
+  }
 }
 
 .single-post--header-image {
-  height: 50rem;
+  height: 60rem;
   width: 100%;
   max-height: 100vh;
-  position: fixed;
+  position: absolute;
   top: 0;
-
-  .background-image {
-    opacity: 0.7;
-  }
 }
 
-.single-post--back-btn {
-  padding: 7rem 0 3.5rem;
-}
-
-.single-post--back-btn--btn {
-  color: white;
-  font-family: $font-main;
-
-  &:hover,
-  &:focus {
-    color: white;
-    border-bottom: 1px solid currentColor;
-  }
-}
-
-.single-post--container {
-  padding: 5rem;
+.single-post--container,
+.single-lookbook-container {
+  padding: 7.5rem;
   background: white;
-  margin: 0 auto 10rem auto;
-  img {
-    width: 100%;
-    height: auto;
-    margin: 2rem 0;
+  margin: 25rem auto 10rem auto;
+  @media screen and (#{$bp-tablet}) {
+    padding: 2.5rem;
+    .layouts {
+      flex-direction: column;
+      .one-half {
+        display: flex;
+        flex-direction: row-reverse;
+
+        p:first-of-type {
+          margin-left: 2rem;
+        }
+      }
+    }
   }
-  .gallery img {
-    width: auto;
-    height: auto;
-    margin: 0;
+  @media screen and (#{$bp-phablet}) {
+    padding: 0.5rem;
+    .layouts {
+      flex-direction: column;
+      .one-half {
+        display: flex;
+        flex-direction: column;
+        img {
+          max-width: 60vw;
+          margin: 0 auto;
+          display: block;
+        }
+        p:first-of-type {
+          margin-left: 0rem;
+        }
+      }
+    }
+  }
+  @media screen and (#{$bp-tablet}) {
+    width: 100%;
+  }
+  .gallery {
+    padding: 0 8rem;
+    @media screen and (#{$bp-desktop}) {
+      padding: 0 4rem;
+    }
+    .flickity-button-icon .arrow {
+      fill: $light-grey;
+    }
+    .carousel-cell {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: auto;
+        height: auto;
+        margin: 0;
+        display: block;
+        max-height: 100%;
+      }
+    }
   }
 }
 
 .single-post--heading {
-  border-bottom: 2px solid $light-grey;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .single-post--title {
-  font-size: 3.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
+  font-size: 5rem;
+  line-height: 1.3;
+  font-weight: 100;
+  letter-spacing: 6px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .single-post--meta {
   display: flex;
-  font-family: $font-main;
-  font-weight: 500;
+  font-family: $font-script;
   text-transform: uppercase;
-  color: $dark-grey;
-  opacity: 0.7;
-  font-size: 1.3rem;
-  letter-spacing: 0.05em;
+  justify-content: center;
+  color: $col1;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
 
   > * {
@@ -89,6 +189,8 @@
 }
 
 .single-post--footer {
-  margin-top: 3.5rem;
-  padding-top: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: -10rem;
+  margin-top: 20rem;
 }

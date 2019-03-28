@@ -1,20 +1,37 @@
+.top-home .social_links,
 .share-buttons {
-  list-style: none;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  opacity: 0.5;
-
-  > * {
-    margin-bottom: 0;
-    + * {
-      margin-left: 1rem;
-    }
+  justify-content: center;
+  display: block;
+  align-items: center;
+  margin: 0;
+  &::before {
+    height: 20rem;
+    width: 1px;
+    background-color: $col1;
+    content: '';
+    position: relative;
+    display: block;
+    left: calc(50% - 1px);
+    margin-bottom: 2rem;
   }
-
-  &:nth-child(1) {
-    font-family: $font-main;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.4rem;
+  li {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    list-style: none;
+    font-size: 2rem;
+    a {
+      color: $col1;
+      &:hover {
+        color: $mid-grey;
+      }
+    }
   }
 }

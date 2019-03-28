@@ -96,54 +96,67 @@ body.home {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin: 0 1rem;
+  margin: 0;
   padding: 0;
   font-weight: lighter;
   li {
     margin: 0;
-    padding: 0 1rem 1rem;
+    padding: 0 0.25rem;
     position: relative;
+
+    &.current-menu-item a {
+      color: $col1;
+
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+    }
   }
   a {
+    display: block;
     color: $dark-grey;
     font-size: 1.3rem;
+    font-weight: 300;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background-color: $col1;
+      transition: ease all 0.3s;
+    }
     &:hover {
-      color: $col2;
+      color: $col1;
+      &::after {
+        left: 0;
+        width: 100%;
+      }
     }
   }
   .sub-menu {
     list-style: none;
     margin: 0;
-    padding: 3rem 2rem 1.2rem 2rem;
+    padding: 2rem 1rem 1rem 1rem;
     position: absolute;
-    top: 2rem;
+    top: 2.5rem;
     left: -1rem;
-    background: rgba($mid-grey, 0.4);
+    background: $col4;
     width: 250px;
     display: none;
     li {
       display: block;
-      position: relative;
+      margin: 0 0 1.5rem 0;
     }
     a {
       display: block;
     }
-    .sub-menu {
-      list-style: none;
-      margin: 0;
-      padding: 1.2rem 2rem;
-      position: absolute;
-      top: -1rem;
-      left: 200px;
-      background: rgba($mid-grey, 0.8);
-      width: 250px;
-      display: none;
-    }
   }
-  .menu-item-has-children:hover > .sub-menu {
-    display: block;
-  }
-  .sub-menu .menu-item-has-children:hover > .sub-menu {
+  .menu-item-has-children:hover .sub-menu {
     display: block;
   }
 }
@@ -153,85 +166,30 @@ body.home {
   height: 100%;
   text-align: center;
   display: block;
-  margin: 0 4rem;
   flex-shrink: 0;
-  @media screen and (#{$bp-tablet}) {
+  @media screen and (#{$bp-desktop}) {
     margin: 1rem 0;
   }
 
   img {
-    width: 80px;
+    width: 32.5rem;
     height: 100%;
     margin: 0 auto;
-    @media screen and (#{$bp-tablet}) {
-      width: 50px;
-    }
-  }
-}
-
-.woo-tools {
-  position: relative;
-  margin: -1rem 0 0 auto;
-  font-size: 1.2rem;
-  font-weight: 600;
-  z-index: 20;
-  font-weight: lighter;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  svg {
-    margin: 0 1rem;
-  }
-  .tools {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.cart-contents {
-  margin: 0 4rem 0 1rem;
-  @media screen and (#{$bp-mobile}) {
-    margin: 0 2rem 0 0;
-  }
-  a {
-    position: relative;
+    transition: ease all 0.3s;
     display: block;
-    padding: 1rem 0 0.5rem 0;
-  }
-  .fa {
-    font-size: 2rem;
-  }
-  .in-cart {
-    position: absolute;
-    top: -5px;
-    right: -8px;
-    background: $col2;
-    border-radius: 100%;
-    font-size: 11px;
-    line-height: 20px;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    font-weight: 600;
-    color: white;
-  }
-}
-@media screen and (#{$bp-tablet}) {
-  .open-nav .cart-contents {
-    a {
-      color: white;
+    @media screen and (#{$bp-desktophd}) {
+      width: 25rem;
     }
-    .in-cart {
-      background: white;
-      color: $col2;
+
+    @media screen and (#{$bp-desktop}) {
+      width: 135px;
     }
   }
 }
+
 .current-product_cat-ancestor a,
 .current-page-parent a,
 .current-menu-item a {
   position: relative;
-  color: $col3;
+  color: $col1;
 }

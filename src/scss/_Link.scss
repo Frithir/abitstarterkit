@@ -1,12 +1,12 @@
-
 // Link
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 a {
-	color: $col2;
-	text-decoration: none;
+  color: $col1;
+  text-decoration: none;
+  transition: ease all 0.3s;
 
-	&:hover {
-		color: $col3;
-	}
+  &:hover {
+    color: $col3;
+  }
 }

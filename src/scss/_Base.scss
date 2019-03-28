@@ -11,11 +11,12 @@ html {
 body {
   color: $dark-grey;
   font-family: $font-main;
-  font-size: 1.6em; // currently ems cause chrome bug misinterpreting rems on body element
+  font-size: 1.5em; // currently ems cause chrome bug misinterpreting rems on body element
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  background: white;
   @media screen and (#{$bp-tablet}) {
     font-size: 1.4rem;
   }
@@ -31,4 +32,66 @@ body.single-product {
 *:after,
 *:before {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px $col4;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darken($col2, 2%);
+}
+
+::selection {
+  background: $col2;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page-template-default {
+  padding-top: 20rem;
+
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  z-index: 1;
+  @media screen and (#{$bp-tablet}) {
+    transform: scale(0.75);
+    right: 2rem;
+    top: 2rem;
+  }
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 22px;
+  top: -2px;
+  content: ' ';
+  height: 5rem;
+  width: 2px;
+  background-color: white;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }

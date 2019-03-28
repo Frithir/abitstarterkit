@@ -13,18 +13,22 @@
 
 .Accordion--item {
   position: relative;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid rgba($mid-grey, 0.5);
+  border-bottom: 2px solid rgba($light-grey, 0.5);
+
+  &:first-of-type {
+    border-top: 2px solid rgba($light-grey, 0.5);
+  }
 }
 
 .Accordion--item h4 {
   cursor: pointer;
   display: block;
   margin: 0;
-
   letter-spacing: 0.1rem;
   font-weight: lighter;
-  font-family: $font-main;
+  font-family: $font-script;
+  font-size: 1.5rem;
+  padding: 2rem 0;
 }
 
 .Accordion--item svg {
@@ -38,7 +42,7 @@
 }
 
 .Accordion--item .description {
-  padding-top: 0;
+  padding-bottom: 0;
   opacity: 0;
   transition: ease all 0.3s;
   max-height: 0;
@@ -46,11 +50,11 @@
 }
 
 .Accordion--item.active .description {
-  padding-top: 2rem;
+  padding-bottom: 2rem;
   opacity: 1;
   max-height: 5000rem;
 }
 
 .Accordion--item.active h4 {
-  font-weight: bold;
+  color: $col1;
 }

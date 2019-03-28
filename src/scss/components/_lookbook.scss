@@ -1,0 +1,104 @@
+.lookbook-featured {
+  position: relative;
+  padding-top: 15rem;
+
+  @media screen and(#{$bp-desktop}) {
+    padding-top: 0;
+  }
+
+  .container {
+    @media screen and(#{$bp-desktop}) {
+      flex-direction: column;
+    }
+    &::before {
+      content: '';
+      width: calc(80% + 2rem);
+      height: 60rem;
+      position: absolute;
+      top: -7.5rem;
+      right: -2rem;
+      background: $col2;
+      display: block;
+      @media screen and(#{$bp-desktop}) {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      &::after {
+        content: '';
+        width: calc(100vw - 720px);
+        height: 60rem;
+        position: absolute;
+        top: -7.5rem;
+        left: 100%;
+        background: $col2;
+        display: block;
+      }
+    }
+  }
+  .post-info {
+    padding: 4rem;
+    @media screen and(#{$bp-desktop}) {
+      padding: 4rem 0;
+      width: 100%;
+    }
+  }
+  .post-category {
+    color: $col1;
+    font-family: $font-script;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  h2 {
+    margin: 1rem 0;
+    font-size: 6rem;
+    font-weight: 200;
+    @media screen and (#{$bp-phablet}) {
+      font-size: 1.6rem;
+    }
+  }
+  .excerpt {
+    margin-bottom: 5rem;
+  }
+  .featured-images {
+    width: 66%;
+    @media screen and(#{$bp-desktop}) {
+      width: 100%;
+    }
+    .post-thumbnail,
+    .post-video {
+      width: 50%;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+      margin: 0 2rem;
+      height: 600px;
+      width: calc(50% - 1rem);
+      @media screen and(#{$bp-desktop}) {
+        margin: 0 0rem;
+      }
+      @media screen and(#{$bp-tablet}) {
+        height: 60vw;
+      }
+    }
+  }
+}
+
+.lookbook-categories {
+  font-family: $font-script;
+  color: $col1;
+}
+
+.single-lookbook-section {
+  padding: 4rem 0;
+  .single-lookbook-container {
+    background: white;
+  }
+}
+
+.post-type-archive-lookbook h4,
+.blog h4 {
+  @media screen and (#{$bp-phablet}) {
+    display: block !important ;
+  }
+}

@@ -1,0 +1,125 @@
+/* About Page */
+.page-template-page-about {
+  .header-banner.section.thin.woo-title-section {
+    display: none;
+  }
+
+  .about-section .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media screen and (#{$bp-desktop}) {
+      padding-bottom: 5rem;
+    }
+
+    @media screen and (#{$bp-phablet}) {
+      flex-direction: column-reverse;
+    }
+
+    .split--left,
+    .split--right {
+      width: 50%;
+      margin: 0;
+      padding: 0;
+
+      @media screen and (#{$bp-phablet}) {
+        width: 100%;
+      }
+    }
+
+    .split--left {
+      padding-right: 5rem;
+      display: flex;
+      justify-content: flex-end;
+
+      @media screen and (#{$bp-desktop}) {
+        padding-right: 2rem;
+      }
+
+      @media screen and (#{$bp-tablet}) {
+        padding-right: 1rem;
+      }
+
+      @media screen and (#{$bp-phablet}) {
+        margin-top: 3.5rem;
+      }
+
+      img {
+        position: relative;
+        height: 65vw;
+        max-height: 80rem;
+        max-width: 100%;
+
+        @media screen and (#{$bp-desktop}) {
+          height: calc(70vw - 2rem);
+        }
+      }
+    }
+
+    .split--right {
+      padding-left: 5rem;
+      display: flex;
+      justify-content: flex-start;
+
+      @media screen and (#{$bp-desktop}) {
+        padding-left: 2rem;
+      }
+      @media screen and (#{$bp-tablet}) {
+        padding-left: 1rem;
+      }
+
+      > div {
+        max-width: 50rem;
+        width: 100%;
+
+        @media screen and (#{$bp-phablet}) {
+          max-width: none;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      @media screen and (#{$bp-phablet}) {
+        flex-direction: column;
+      }
+
+      .split--left {
+        padding-left: 5rem;
+        padding-right: 0;
+        justify-content: flex-start;
+        @media screen and (#{$bp-desktop}) {
+          padding-left: 2rem;
+        }
+        @media screen and (#{$bp-tablet}) {
+          padding-left: 1rem;
+        }
+        @media screen and (#{$bp-phablet}) {
+          top: calc(-63.5vw - 9.5rem);
+          position: absolute;
+        }
+      }
+
+      .split--right {
+        padding-left: 0;
+        padding-right: 5rem;
+        justify-content: flex-end;
+        @media screen and (#{$bp-desktop}) {
+          padding-right: 2rem;
+        }
+        @media screen and (#{$bp-tablet}) {
+          padding-right: 1rem;
+        }
+        @media screen and (#{$bp-phablet}) {
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .section.accordion {
+    background: $col4;
+  }
+}

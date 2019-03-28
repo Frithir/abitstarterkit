@@ -2,11 +2,16 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .section {
-  padding: 5rem 0;
+  padding: 7.5rem 0;
+  width: 100%;
   overflow: hidden;
   position: relative;
+  background-color: white;
   @media screen and (#{$bp-tablet}) {
     padding: 2rem 0;
+  }
+  &.madi-brides {
+    padding-top: 3rem;
   }
   &.thin {
     padding: 2.5rem 0;
@@ -15,7 +20,7 @@
     }
   }
   &.thick {
-    padding: 10rem 0;
+    padding: 15rem 0;
     @media screen and (#{$bp-desktop}) {
       padding: 8rem 0;
     }
@@ -41,17 +46,18 @@
   width: calc(100% - 2rem);
   max-width: $container-width;
   margin: 0 auto;
+  &.skinny {
+    max-width: $container-width-skinny;
+  }
   &.small {
     max-width: $container-width-small;
   }
   &.smaller {
     max-width: $container-width-smaller;
   }
-  &.skinny {
-    max-width: $container-width-skinny;
-  }
   @media screen and (#{$bp-tablet}) {
-    width: calc(100% - 0.5rem);
+    width: 100%;
+    padding: 0 0.5rem;
   }
 }
 
@@ -62,7 +68,7 @@
   width: 100%;
   height: 100%;
   background: $dark-grey;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .g-overlay {
@@ -73,8 +79,7 @@
 
 .one-half {
   position: relative;
-  width: calc(50% - 4rem);
-  margin: 0 2rem;
+  width: calc(50% - 2rem);
   @media screen and (#{$bp-tablet}) {
     width: 100%;
     margin: 0 0 2rem 0;
@@ -82,23 +87,19 @@
 }
 .one-third {
   position: relative;
-  width: calc(33.333% - 4rem);
-  margin: 0 2rem;
+  width: calc(33.333% - 2rem);
 }
 .two-thirds {
   position: relative;
-  width: calc(75% - 4rem);
-  margin: 0 2rem;
+  width: calc(75% - 2rem);
 }
 .one-quarter {
   position: relative;
-  width: calc(25% - 4rem);
-  margin: 0 2rem;
+  width: calc(25% - 2rem);
 }
 .three-quaters {
   position: relative;
-  width: calc(75% - 4rem);
-  margin: 0 2rem;
+  width: calc(75% - 2rem);
 }
 
 .flex {
@@ -139,19 +140,31 @@
 }
 
 .background-image {
-  position: absolute;
+  position: absolute 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
   overflow: hidden;
-  img {
+  img,
+  video {
     width: 100%;
     @supports (object-fit: cover) {
       object-fit: cover;
       object-position: center;
       height: 100%;
     }
+  }
+}
+.background-video {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

@@ -1,19 +1,22 @@
 .edit_link {
   position: fixed;
   margin: 0;
-  top: 10px;
-  left: 10px;
+  top: 100px;
+  right: 15px;
   z-index: 99999;
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
+  font-family: $font-main;
+  letter-spacing: 1px;
+  font-weight: 300;
 
   i {
     width: 30px;
     height: 30px;
     line-height: 30px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: $col2;
     border-radius: 30px;
     font-size: 15px;
     -webkit-transition: all 0.2s ease;
@@ -21,7 +24,7 @@
   }
 
   span {
-    background-color: #ffffff;
+    background-color: $col2;
     text-transform: uppercase;
     padding: 3px 5px;
     border-radius: 2px;
@@ -30,18 +33,12 @@
   }
 
   a {
-    color: #000000;
+    color: $dark-grey;
     background-color: transparent;
 
     &:hover {
-      i {
-        background-color: rgb(113, 113, 113);
-        color: #ffffff;
-      }
-
       span {
-        background-color: rgb(113, 113, 113);
-        color: #ffffff;
+        margin-left: 10px;
       }
     }
   }

@@ -2,9 +2,26 @@ form.woocommerce-checkout {
   input,
   textarea,
   select {
-    background: white;
+    background: $col2;
   }
 }
+.woocommerce-additional-fields {
+  display: none;
+}
+.select2-container--default .select2-selection--single {
+  background: $col2;
+  border: none;
+  border-radius: 4px;
+  min-height: 50px;
+  padding: 1rem;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  top: 92%;
+}
+
 .woocommerce-checkout {
   h1 {
     text-align: center;
@@ -125,10 +142,17 @@ form.woocommerce-checkout {
   margin: 0 2rem 0 0;
 }
 
-#billing_address_2_field,
-#billing_company_field {
-  display: none;
-  height: 0;
+.woocommerce-checkout h2 {
+  font-size: 3rem;
+}
+
+.woocommerce-thankyou-order-details {
+  margin: 1rem 0;
+}
+.woocommerce-order-overview__payment-method {
+  display: none !important;
+}
+.wc-item-meta li {
   margin: 0;
-  padding: 0;
+  font-size: 1.1rem;
 }

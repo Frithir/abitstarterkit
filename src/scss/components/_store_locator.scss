@@ -1,0 +1,160 @@
+//
+// Store Locator
+// --------------------------------------------------
+
+.page-template-page-storeLocator {
+  .header-banner {
+    background-color: $col4;
+    .page_header_title {
+      text-align: left;
+      max-width: $container-width-small;
+      margin: 2.5rem auto 0;
+    }
+  }
+}
+
+.store-locator {
+  color: $dark-grey;
+  background-color: $col4;
+  padding-top: 0;
+}
+
+.store-locator--inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  label {
+    width: 100%;
+    margin: 0;
+    input {
+      background-color: white;
+      padding: 2.5rem 2rem;
+      color: $dark-grey;
+      font-weight: 600;
+    }
+  }
+  ::-webkit-input-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder,
+  :-moz-placeholder {
+    color: $dark-grey;
+    font-weight: 400;
+  }
+}
+
+.store-locator--map {
+  height: 50rem;
+  max-height: 100vh;
+}
+
+.store-locator--marker {
+}
+
+.store-locator--marker--title {
+}
+
+.store-locator--marker--meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.store-locator--marker--meta--heading {
+  text-transform: capitalize;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.store-locator--results {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  color: $col2;
+  a {
+    color: white;
+    &:hover {
+      color: $col2;
+    }
+  }
+  .store-locator--marker--title {
+    color: white;
+  }
+}
+
+.store-locator--results--item {
+  width: calc(33.33% - 2rem);
+  margin: 1rem;
+  border: 1px solid $dark-grey;
+  padding: 1rem 2rem;
+  background: $mid-grey;
+}
+
+.store-locator--results-custom {
+  h3 {
+    font-size: 3rem;
+    display: block;
+    width: 100%;
+    line-height: 7rem;
+    border-bottom: 1px solid $light-grey;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+  }
+
+  .locations-grid {
+    opacity: 0;
+
+    .locations-grid-sizer,
+    .locations-grid-item {
+      width: calc(25% - 5rem);
+
+      @media screen and (#{$bp-desktop}) {
+        width: calc(33.33% - 5rem);
+      }
+      @media screen and (max-width: 800px) {
+        width: calc(50% - 5rem);
+      }
+      @media screen and (max-width: 600px) {
+        width: calc(100% - 0.5rem);
+      }
+    }
+
+    .locations-grid-item {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 4rem;
+      display: block;
+
+      div {
+        margin-bottom: 2rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        p {
+          line-height: 2.2rem;
+          h4 {
+            font-size: 2.2rem;
+          }
+
+          span {
+            display: block;
+            margin: 1.5rem 0;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+          a {
+            color: $dark-grey;
+            &:hover {
+              color: $col1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,31 +1,83 @@
 .overview-block {
   position: relative;
   display: block;
-  width: calc(100% / 3 - 2rem);
-  text-align: center;
+  width: calc(100% / 4 - 2rem);
   color: $dark-grey;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background: $col1;
+  background: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  @media screen and (#{$bp-tablet}) {
-    width: calc(50% - 2rem);
+  padding-bottom: 2rem;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    top: 100%;
+    width: 0;
+    left: 0;
+    height: 2px;
+    content: '';
+    background-color: $col3;
+    transition: ease all 0.3s;
   }
-  @media screen and (#{$bp-mobile}) {
-    width: 100%;
+  @media screen and (#{$bp-tablet}) {
+    width: calc(50% - 1rem);
+  }
+  @media screen and (#{$bp-phablet}) {
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+    .post-thumbnail {
+      > * {
+        transform: scale(1.05);
+      }
+      &::after {
+        width: 150%;
+      }
+    }
   }
   .post-thumbnail {
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 30vw;
+    max-height: 45rem;
     width: 100%;
     display: block;
+    background-color: $col4;
+    @media screen and (#{$bp-tablet}) {
+      height: 60vw;
+      max-height: none;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      left: -25%;
+      width: 0;
+      height: 100%;
+      display: block;
+      content: '';
+      opacity: 0.45;
+      transform: skewX(-15deg);
+      transition: ease all 0.5s;
+      background-color: $col3;
+      @media screen and (#{$bp-tablet}) {
+        display: none;
+      }
+    }
+    > * {
+      transition: ease all 0.3s;
+    }
+    .background-video {
+      height: 100%;
+    }
   }
   .post-info {
-    padding: 4rem;
+    padding-top: 1rem;
   }
   .catbox {
     background: rgba($col1, 0.4);
@@ -38,17 +90,32 @@
   }
   h4 {
     color: inherit;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: capitalize;
     margin: 1rem 0;
     @media screen and (#{$bp-phablet}) {
-      font-size: 1.6rem;
+      display: none;
+      font-size: 1.85rem;
+    }
+    @media screen and (#{$bp-phablet}) {
+      display: none;
+      font-size: 1.5rem;
+    }
+  }
+  p {
+    @media screen and (#{$bp-phablet}) {
+      display: none;
     }
   }
   .post-info-date {
-    font-weight: lighter;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     letter-spacing: 0.2rem;
+    line-height: 1.3rem;
+    font-family: $font-script;
+    text-transform: uppercase;
+    color: $col1;
+    margin: 0;
   }
   &:hover {
     color: $dark-grey;

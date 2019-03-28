@@ -3,33 +3,11 @@
   overflow: hidden;
   .script {
     font-family: $font-script;
-    color: $col2;
-    font-size: 6rem;
+    color: $col1;
+    font-size: 1.6rem;
     line-height: 1;
     font-weight: lighter;
-    @media screen and (#{$bp-desktop}) {
-      font-size: 5.5rem;
-    }
-    @media screen and (#{$bp-tablet}) {
-      font-size: 4.5rem;
-    }
-    @media screen and (#{$bp-mobile}) {
-      font-size: 3.5rem;
-    }
-  }
-  .bold {
-    font-family: $font-bold;
-    font-size: 4.2rem;
-    line-height: 1;
-    margin: 0 0 2rem 0;
-    @media screen and (#{$bp-desktop}) {
-      font-size: 4rem;
-    }
-    @media screen and (#{$bp-tablet}) {
-      font-size: 3rem;
-    }
-    @media screen and (#{$bp-mobile}) {
-      font-size: 2.2rem;
-    }
+    margin-bottom: 2rem;
+    display: inline-block;
   }
 }

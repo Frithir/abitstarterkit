@@ -1,4 +1,16 @@
 // shadow offset
+.page-template-page-contact {
+  .page_header_title {
+    text-align: left;
+    max-width: $container-width-small;
+    margin: 2.5rem auto 0;
+  }
+}
+
+.page-template-page-contact .contact {
+  padding: 0;
+}
+
 $offset: 0;
 .two-column {
   overflow: visible;
@@ -6,7 +18,7 @@ $offset: 0;
     width: 100%;
     position: relative;
     align-items: stretch;
-    margin: 0 0 10rem 0;
+    padding-bottom: 10rem;
     @media screen and (#{$bp-tablet}) {
       flex-direction: column;
       align-items: center;
@@ -26,12 +38,59 @@ $offset: 0;
   .content {
     width: 50%;
     position: relative;
-    padding: 0 0 0 2rem;
     @media screen and (#{$bp-tablet}) {
       width: 100%;
     }
-    @media screen and (#{$bp-phablet}) {
-      padding: 0;
+
+    &.details {
+      padding-right: 5rem;
+      @media screen and (#{$bp-tablet}) {
+        margin-top: 2.5rem;
+        padding-right: 0;
+      }
+      a {
+        position: relative;
+        color: $dark-grey;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        display: block;
+        margin-bottom: 2rem;
+        transition: ease all 0.3s;
+
+        &.icon {
+          padding-left: 5rem;
+        }
+
+        span {
+          width: 5rem;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        // svg {
+        //   position: absolute;
+        //   left: 0;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+        //   display: inline-block;
+        // }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          color: $col1;
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -41,4 +100,8 @@ $offset: 0;
   img {
     width: 100%;
   }
+}
+
+#field_1_6 {
+  display: none;
 }

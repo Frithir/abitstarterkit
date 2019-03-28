@@ -1,0 +1,21 @@
+.content-layouts {
+  width: 100%;
+  .layouts {
+    margin: 0 0 4rem 0;
+    ul {
+      list-style: none;
+      margin: 0;
+      li {
+        position: relative;
+        &:before {
+          content: ' • ';
+          color: $col3;
+        }
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

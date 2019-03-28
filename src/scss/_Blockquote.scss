@@ -4,18 +4,40 @@
 blockquote {
   margin: 2rem 0 4rem 0 !important;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
   p {
+    position: relative;
     padding: 0;
     margin: 0;
     font-family: $font-script;
-    font-size: 2rem;
-    line-height: 1;
-    color: $col3;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: $col1;
+    max-width: 55rem;
+    margin-left: 6rem;
+
     @media screen and (#{$bp-tablet}) {
-      font-size: 4rem;
+      margin-left: 3rem;
     }
-    @media screen and (#{$bp-mobile}) {
-      font-size: 3rem;
+
+    &::before {
+      content: '”';
+      position: absolute;
+      right: calc(100% + 1rem);
+      top: 2.5rem;
+      font-size: 10rem;
+      color: $col1;
+      display: block;
+      font-family: 'sans-serif';
+
+      @media screen and (#{$bp-tablet}) {
+        top: 1.2rem;
+        font-size: 6rem;
+        right: calc(100% + 0.5rem);
+      }
     }
   }
 }

@@ -1,5 +1,18 @@
+.blog .cat-item-all a {
+  color: $col1;
+  &::after {
+    left: 0;
+    width: 100%;
+  }
+}
+
 .blog-nav--section {
-  background: white;
+  background: $col2;
+  padding: 4rem 0 !important;
+
+  @media screen and (#{$bp-tablet}) {
+    padding: 2rem 0 !important;
+  }
 }
 
 .blog-nav--list {
@@ -15,14 +28,36 @@
     margin: 0 1rem;
   }
   a {
+    position: relative;
     color: $dark-grey;
     text-transform: uppercase;
     font-size: 1.4rem;
-    &:hover {
-      color: $col3;
+    transition: ease all 0.3s;
+    letter-spacing: 1px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background-color: $col1;
+      transition: ease all 0.3s;
+    }
+    &:hover,
+    &.active {
+      color: $col1;
+      &::after {
+        left: 0;
+        width: 100%;
+      }
     }
   }
   .current-cat a {
-    color: $col3;
+    color: $col1;
+    &::after {
+      left: 0;
+      width: 100%;
+    }
   }
 }
