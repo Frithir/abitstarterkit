@@ -7,19 +7,19 @@ require_once('functions/default.php');
 require_once('functions/menu.php');
 
 // Un-comment to use
-// require_once('functions/acf.php');
+require_once('functions/acf.php');
 // require_once('functions/documentation.php');
 // require_once('functions/gravityforms.php');
 // require_once('functions/gravity_forms-v5.php');
 // require_once('functions/images.php');
-// require_once('functions/pagination.php');
+require_once('functions/pagination.php');
 // require_once('functions/yoast.php');
 
 // // custom post types
 // require_once('functions/cpt.php');
 
 // //shop
-// require_once('functions/woo.php');
+require_once('functions/woo.php');
 
 // // Components
 // require_once('functions/components.php');

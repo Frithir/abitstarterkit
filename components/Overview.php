@@ -32,24 +32,26 @@ class Overview {
     <div class="flex overview <?= $props['classes']; ?>">
       <?php if ($props['slider']) : ?>
         <div class="featured-slider">
-      <?php endif; ?>
-      <?php
-      if($result->have_posts()) {
-        while($result->have_posts()) {
-          $result->the_post();
-          global $post;
-          if ($props['post_type'] == "product") {
-            get_template_part('components/card-product');
-          } elseif($props['post_type'] == "howto") {
-            get_template_part('components/card-howto');
-          } else {
-            get_template_part('components/card-post');
+        <?php endif; ?>
+        <?php
+        if($result->have_posts()) {
+          while($result->have_posts()) {
+            $result->the_post();
+            global $post;
+            if ($props['post_type'] == "product") {
+              get_template_part('components/card-product');
+            } elseif($props['post_type'] == "lookbook" && $props['meta_key'] == "_is_ns_featured_post") {
+              get_template_part('components/card-lookbook-featured');
+            } elseif($props['post_type'] == "lookbook") {
+              get_template_part('components/card-lookbook');
+            } else {
+              get_template_part('components/card-post');
+            }
           }
         }
-      }
-      ?>
-      <?php if ($props['slider']) : ?>
-</div>
+        ?>
+        <?php if ($props['slider']) : ?>
+        </div>
       <?php endif; ?>
     </div>
     <?php

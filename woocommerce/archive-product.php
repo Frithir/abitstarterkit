@@ -11,8 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' );
 
-wc_get_template_part( 'woo', 'banner' );
-wc_get_template_part( 'woo', 'filter' );
 ?>
 <section class="section basepad">
 	<div class="container">

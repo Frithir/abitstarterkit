@@ -1,0 +1,5 @@
+#woocommerce-product-images,
+#tagsdiv-product_tag {
+  display: none;
+  opacity: 0;
+}
