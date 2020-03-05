@@ -4,17 +4,21 @@
 // Move metabox to bottom
 add_filter( 'wpseo_metabox_prio', function() { return 'low';});
 
-// // Removes the Yoast columns from pages & posts
-// function prefix_remove_yoast_columns( $columns ) {
-//   unset( $columns['wpseo-score'] );
-//   unset( $columns['wpseo-title'] );
-//   unset( $columns['wpseo-metadesc'] );
-//   unset( $columns['wpseo-focuskw'] );
-//   return $columns;
-// }
-// add_filter ( 'manage_edit-post_columns',    'prefix_remove_yoast_columns' );
-// add_filter ( 'manage_edit-page_columns',    'prefix_remove_yoast_columns' );
-// add_filter ( 'manage_edit-{post_type}_columns',    'prefix_remove_yoast_columns' );
+add_filter( 'manage_edit-post_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
+add_filter( 'manage_edit-page_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
+//woo
+//add_filter( 'manage_edit-product_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
+
+function yoast_seo_admin_remove_columns( $columns ) {
+  unset($columns['wpseo-score']);
+  unset($columns['wpseo-score-readability']);
+  unset($columns['wpseo-title']);
+  unset($columns['wpseo-metadesc']);
+  unset($columns['wpseo-focuskw']);
+  unset($columns['wpseo-links']);
+  unset($columns['wpseo-linked']);
+  return $columns;
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// WP-LOGIN Autofocus Fix
